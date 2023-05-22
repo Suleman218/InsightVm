@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  nginx:
+    build: ./nginx-config
+    container_name: my-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./website/dist:/usr/share/nginx/html
